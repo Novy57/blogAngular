@@ -2,10 +2,12 @@
   <h1> Posts </h1>
   <div class="row">
     <ul class="list-group">
-      <app-post-list-item *ngFor="let post of postsList"
+      <app-post-list-item *ngFor="let post of posts; let i = index"
                           [postTitle] = "post.title"
                           [postContent] = "post.content"
-                          [postCreatedAt] = "post.created_at" >
+                          [postCreatedAt] = "post.created_at"
+                          [postLoveIts] = "post.loveIts"
+                          [index] = "i">
       </app-post-list-item>
     </ul>
   </div>
